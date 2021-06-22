@@ -24,6 +24,4 @@ Here is an image with a link
 
 > Something in quotes
 
-> i something important
-
 [Here is a link](https://github.com/ALSWiki)
