@@ -11,10 +11,10 @@ This is a sample page
 2. another ordered point
 3. yet another ordered
 
-| Column  | Another Column |
-| ------  | -------------- |
-| row     | row row row    |
-| wowies  | wow            |
+| Column  |        Another Column     |
+| ------  | ------------------------- |
+| row     | row row row row row row   |
+| wowies  | wow                       |
 
 ## Subsection
 
