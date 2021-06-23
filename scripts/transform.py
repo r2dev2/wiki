@@ -3,7 +3,22 @@ import sys
 from markdown import markdown
 
 def transform_markdown(md):
-    return markdown(md, extensions=["extra"])
+    article = markdown(md, extensions=["extra"])
+    print(article)
+    return f"""
+<html>
+    <head>
+        <title>Sample page</title>
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+
+    <body>
+        <main>
+            {article}
+        <main>
+    </body>
+</html>
+    """
 
 def transform_file(in_file, out_file):
     with open(in_file, "r") as fin:
