@@ -69,7 +69,7 @@ def main():
             os.mkdir(root_dir)
 
         for filename in files:
-            transform_file(Path(dirname) / filename, root_dir / filename)
+            transform_file(Path(dirname) / filename, (root_dir / filename).with_suffix(".html"))
 
 
 if __name__ == "__main__":
