@@ -22,7 +22,7 @@ def transform_markdown(md):
 <html>
     <head>
         <title>Sample page</title>
-        <link rel="stylesheet" href="./index.css" />
+        <link rel="stylesheet" href="../index.css" />
     </head>
 
     <body>
