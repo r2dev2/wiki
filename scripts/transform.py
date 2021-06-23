@@ -1,4 +1,8 @@
+import os
+import shutil
 import sys
+from contextlib import suppress
+from pathlib import Path
 from operator import attrgetter
 
 from bs4 import BeautifulSoup
@@ -38,8 +42,34 @@ def transform_file(in_file, out_file):
         print(transform_markdown(md), file=fout)
 
 
+def is_markdown(fp):
+    return fp[-3:] == ".md"
+
+
 def main():
-    transform_file(sys.argv[1], sys.argv[2])
+    if len(sys.argv) > 2:
+        transform_file(sys.argv[1], sys.argv[2])
+        return
+
+    with suppress(FileExistsError):
+        os.mkdir("__dist__")
+    shutil.copy("index.css", Path("__dist__") / "index.css")
+
+    for dirname, _, filenames in os.walk("."):
+        if dirname[:3] == "./." or dirname[:10] == "./__dist__":
+            continue
+
+        files = [*filter(is_markdown, filenames)]
+        if not files:
+            continue
+
+        root_dir = Path("__dist__") / dirname
+
+        with suppress(FileExistsError):
+            os.mkdir(root_dir)
+
+        for filename in files:
+            transform_file(Path(dirname) / filename, root_dir / filename)
 
 
 if __name__ == "__main__":
