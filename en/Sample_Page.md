@@ -18,9 +18,15 @@ This is a sample page
 
 ## Subsection
 
-Here is an image with a link
+Here are images that are also links
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+
+Here is an image
+
+![logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Mtte_sFHtaY0P0ZQKmzajgHaHa%26pid%3DApi&f=1)
 
 > Something in quotes
 
