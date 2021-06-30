@@ -26,7 +26,7 @@ def transform_markdown(md):
     </head>
 
     <body>
-        <main>
+        <main class="md">
             {article}
         <main>
     </body>
@@ -53,7 +53,9 @@ def main():
 
     with suppress(FileExistsError):
         os.mkdir("__dist__")
-    shutil.copy("index.css", Path("__dist__") / "index.css")
+
+    for file in ["index.html", "index.css", "index.js"]:
+        shutil.copy(file, Path("__dist__") / file)
 
     for dirname, _, filenames in os.walk("."):
         if dirname[:3] == "./." or dirname[:10] == "./__dist__":

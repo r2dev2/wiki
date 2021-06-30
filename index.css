@@ -1,25 +1,25 @@
-table, td, th {
+.md table, td, th {
   border: 1px solid #E0E3E6;
 }
 
-table {
+.md table {
   border-collapse: collapse;
 }
 
-td, th {
+.md td, .md th {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
-tbody > tr:nth-child(even) {
+.md tbody > tr:nth-child(even) {
   background-color: #F6F8FA;
 }
 
-ul p {
+.md ul p {
   margin: 0;
 }
 
-li > ul {
+.md li > ul {
   padding-left: 1.25rem;
 }
 
@@ -29,9 +29,24 @@ main {
   font-family: Arial,sans-serif;
 }
 
-blockquote {
+.md blockquote {
   padding: 0 1rem;
   margin: 0;
   color: #6A737D;
   border-left: 0.25rem solid #E0E3E6;
+}
+
+.article-search {
+  float: right;
+}
+
+.big-search .article-search {
+  float: unset;
+  width: 80%;
+  font-size: 1.2rem;
+}
+
+.big-search {
+  width: 100%;
+  text-align: center;
 }
