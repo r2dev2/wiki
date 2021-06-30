@@ -23,7 +23,7 @@ def transform_markdown(md):
 <html>
     <head>
         <title>Sample page</title>
-        <link rel="stylesheet" href="../index.css" />
+        <link rel="stylesheet" href="../../index.css" />
     </head>
 
     <body>
@@ -58,9 +58,6 @@ def main():
 
     with suppress(FileExistsError):
         os.mkdir("__dist__")
-
-    for file in ["index.html", "index.css", "index.js"]:
-        shutil.copy(file, Path("__dist__") / file)
 
     articles = []
 
