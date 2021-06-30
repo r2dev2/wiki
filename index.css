@@ -40,7 +40,7 @@ main {
   float: right;
 }
 
-.big-search .article-search {
+.big-search input {
   float: unset;
   width: 80%;
   font-size: 1.2rem;

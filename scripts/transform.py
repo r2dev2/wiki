@@ -1,3 +1,4 @@
+import json
 import os
 import shutil
 import sys
@@ -46,6 +47,10 @@ def is_markdown(fp):
     return fp[-3:] == ".md"
 
 
+def filename_to_article_name(fname: str) -> str:
+    return Path(fname).stem.replace("_", " ")
+
+
 def main():
     if len(sys.argv) > 2:
         transform_file(sys.argv[1], sys.argv[2])
@@ -56,6 +61,8 @@ def main():
 
     for file in ["index.html", "index.css", "index.js"]:
         shutil.copy(file, Path("__dist__") / file)
+
+    articles = []
 
     for dirname, _, filenames in os.walk("."):
         if dirname[:3] == "./." or dirname[:10] == "./__dist__":
@@ -71,7 +78,12 @@ def main():
             os.mkdir(root_dir)
 
         for filename in files:
+            name = filename_to_article_name(filename)
             transform_file(Path(dirname) / filename, (root_dir / filename).with_suffix(".html"))
+            articles.append(name)
+
+    with open(Path("__dist__") / "articles.json", "w+") as fout:
+        json.dump(articles, fout)
 
 
 if __name__ == "__main__":
