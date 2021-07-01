@@ -24,10 +24,14 @@ def transform_markdown(md):
     <head>
         <title>Sample page</title>
         <link rel="stylesheet" href="../../index.css" />
+        <script defer src="../../index.js"></script>
     </head>
 
     <body>
         <main class="md">
+        <div class="article-search">
+            <input type="text" placeholder="Search ALSWiki" />
+        </div>
             {article}
         <main>
     </body>
