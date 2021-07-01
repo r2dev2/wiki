@@ -20,8 +20,11 @@ def center_images(html: str):
 def transform_markdown(md):
     article = center_images(markdown(md, extensions=["extra"]))
     return f"""
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Sample page</title>
         <link rel="stylesheet" href="../../index.css" />
         <script defer src="../../index.js"></script>
