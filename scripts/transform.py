@@ -17,7 +17,7 @@ def center_images(html: str):
     return str(soup)
 
 
-def transform_markdown(md):
+def transform_markdown(md, article_title):
     article = center_images(markdown(md, extensions=["extra"]))
     return f"""
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ def transform_markdown(md):
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Sample page</title>
+        <title>{article_title} - ALSWiki</title>
         <link rel="stylesheet" href="../../index.css" />
         <script defer src="../../index.js"></script>
     </head>
@@ -46,8 +46,10 @@ def transform_file(in_file, out_file):
     with open(in_file, "r") as fin:
         md = fin.read()
 
+    article_title = filename_to_article_name(in_file)
+
     with open(out_file, "w+") as fout:
-        print(transform_markdown(md), file=fout)
+        print(transform_markdown(md, article_title), file=fout)
 
 
 def is_markdown(fp):
