@@ -32,8 +32,11 @@ def transform_markdown(md, article_title):
 
     <body>
         <main class="md">
-        <div class="article-search">
-            <input type="text" placeholder="Search ALSWiki" />
+        <div class="top-right">
+            <div id="google_translate_element"></div>
+            <div class="article-search">
+                <input type="text" placeholder="Search ALSWiki" />
+            </div>
         </div>
             {article}
         <main>
