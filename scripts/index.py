@@ -11,6 +11,7 @@ from common import filename_to_article_name, visit_files_in_dir
 
 
 index = dict()
+files = dict()
 useless_chars = re.compile(r"[=|-|–|“|”|.| ]+")
 new_lines = re.compile(r"\n+")
 
@@ -36,18 +37,26 @@ def main():
     )
 
     @visit_files_in_dir("./__dist__", **rules)
+    def filename_lookup(_, filename, count=[0]):
+        files[filename] = count[0]
+        count[0] += 1
+
+    @visit_files_in_dir("./__dist__", **rules)
     def _(dirname, filename):
         with open(Path(dirname) / filename, "r") as fin:
             text = BeautifulSoup(fin.read(), "html.parser").text
 
-        name = filename_to_article_name(filename)
+        num = files[filename]
         for topic in get_topics(text):
             index[topic] = index.get(topic, [])
-            index[topic].append(name)
+            index[topic].append(num)
 
     [*map(list.sort, index.values())]
     with open(Path("__dist__") / "index.json", "w+") as fout:
         json.dump(index, fout)
+
+    with open(Path("__dist__") / "files.json", "w+") as fout:
+        json.dump(files, fout)
 
 if __name__ == "__main__":
     main()
