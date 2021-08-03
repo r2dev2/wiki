@@ -82,8 +82,10 @@ def main():
 
     @visit_files_in_dir(".", **rules)
     def _(dirname, filename):
+        root_dir = Path("__dist__") / dirname
+        root_dir.mkdir(exist_ok=True)
         in_ = Path(dirname) / filename
-        out = (Path("__dist__") / dirname / filename).with_suffix(".html")
+        out = (root_dir / filename).with_suffix(".html")
         transform_file(in_, out)
         articles.append(filename_to_article_name(filename))
 
