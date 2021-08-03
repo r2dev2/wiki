@@ -9,6 +9,8 @@ from operator import attrgetter
 from bs4 import BeautifulSoup
 from markdown import markdown
 
+from common import visit_files_in_dir
+
 
 def center_images(html: str):
     soup = BeautifulSoup(html, "html.parser")
@@ -77,23 +79,17 @@ def main():
 
     articles = []
 
-    for dirname, _, filenames in os.walk("."):
-        if dirname[:3] == "./." or dirname[:10] == "./__dist__":
-            continue
+    rules = dict(
+        dir_exclude=lambda dir_: dir_[:3] == "./." or dir_[:10] == "./__dist__",
+        file_exclude=lambda fname: not is_markdown(fname)
+    )
 
-        files = [*filter(is_markdown, filenames)]
-        if not files:
-            continue
-
-        root_dir = Path("__dist__") / dirname
-
-        with suppress(FileExistsError):
-            os.mkdir(root_dir)
-
-        for filename in files:
-            name = filename_to_article_name(filename)
-            transform_file(Path(dirname) / filename, (root_dir / filename).with_suffix(".html"))
-            articles.append(name)
+    @visit_files_in_dir(".", **rules)
+    def _(dirname, filename):
+        in_ = Path(dirname) / filename
+        out = (Path("__dist__") / dirname / filename).with_suffix(".html")
+        transform_file(in_, out)
+        articles.append(filename_to_article_name(filename))
 
     with open(Path("__dist__") / "articles.json", "w+") as fout:
         json.dump(articles, fout)
