@@ -24,7 +24,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install prerequisites
-        run: python3 -m pip install -r scripts/requirements.txt
+        run: |
+          python3 -m pip install -r scripts/requirements.txt
+          python3 -m textblob.download_corpora
 
       - name: Build
         run: python3 scripts/transform.py
