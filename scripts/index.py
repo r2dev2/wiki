@@ -1,21 +1,26 @@
+import json
 import re
 import sys
+from pathlib import Path
+from typing import Set
 
 from bs4 import BeautifulSoup
 from textblob import TextBlob
 
+from common import filename_to_article_name, visit_files_in_dir
+
 
 index = dict()
-topics = set()
 useless_chars = re.compile(r"[=|-|–|“|”|.| ]+")
+new_lines = re.compile(r"\n+")
 
-def get_sentence_topics(sentence: str) -> set[str]:
+def get_sentence_topics(sentence: str) -> Set[str]:
     blob = TextBlob(sentence)
     return {*blob.noun_phrases.lemmatize()}
 
-def get_topics(text: str) -> set[str]:
+def get_topics(text: str) -> Set[str]:
     topics = set()
-    sentences = re.split(r"\n+", text)
+    sentences = re.split(new_lines, text)
     [*map(topics.update, map(get_sentence_topics, sentences))]
     return {*filter(bool, map(remove_useless_chars, topics))}
 
@@ -25,13 +30,24 @@ def remove_useless_chars(text: str) -> str:
         .replace(" ’ ", "'")
 
 def main():
-    with open(sys.argv[1], "r") as fin:
-        text = fin.read()
+    rules = dict(
+        dir_exclude=lambda dir_: dir_.count("/") < 2,
+        file_exclude=lambda fname: fname[-5:] != ".html"
+    )
 
-    combined_text = BeautifulSoup(text, "html.parser").text
+    @visit_files_in_dir("./__dist__", **rules)
+    def _(dirname, filename):
+        with open(Path(dirname) / filename, "r") as fin:
+            text = BeautifulSoup(fin.read(), "html.parser").text
 
-    print(get_topics(combined_text))
+        name = filename_to_article_name(filename)
+        for topic in get_topics(text):
+            index[topic] = index.get(topic, [])
+            index[topic].append(name)
 
+    [*map(list.sort, index.values())]
+    with open(Path("__dist__") / "index.json", "w+") as fout:
+        json.dump(index, fout)
 
 if __name__ == "__main__":
     main()

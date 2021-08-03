@@ -9,7 +9,7 @@ from operator import attrgetter
 from bs4 import BeautifulSoup
 from markdown import markdown
 
-from common import visit_files_in_dir
+from common import filename_to_article_name, visit_files_in_dir
 
 
 def center_images(html: str):
@@ -63,10 +63,6 @@ def transform_file(in_file, out_file):
 
 def is_markdown(fp):
     return fp[-3:] == ".md"
-
-
-def filename_to_article_name(fname: str) -> str:
-    return Path(fname).stem.replace("_", " ")
 
 
 def main():
