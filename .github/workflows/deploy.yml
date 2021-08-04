@@ -29,7 +29,9 @@ jobs:
           python3 -m textblob.download_corpora
 
       - name: Build
-        run: python3 scripts/transform.py
+        run: |
+          python3 scripts/transform.py
+          python3 scripts/index.py
         
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
