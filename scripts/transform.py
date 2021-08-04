@@ -29,7 +29,7 @@ def transform_markdown(md, article_title):
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>{article_title} - ALSWiki</title>
         <link rel="stylesheet" href="../../index.css" />
-        <script defer src="../../index.js"></script>
+        <script defer src="../../index.js" type="module"></script>
     </head>
 
     <body>
