@@ -1,4 +1,4 @@
-## Commonly used abbreviations and acronyms
+# Commonly used abbreviations and acronyms
 
 ### Info
 
