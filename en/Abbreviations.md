@@ -1,3 +1,7 @@
+## Commonly used abbreviations and acronyms
+
+### Info
+
 ALS = Amyotrophic Lateral Sclerosis 
 
 ELA = esclerosis lateral amiotrófica (ALS in Spanish)
@@ -204,3 +208,6 @@ talking about one person or multiple people, the acronyms are ALWAYS “PALS” 
 
 “CALS.”
 
+### References
+
+Roscenzwig, Sarah. https://drive.google.com/file/d/1N-wmywUgTTyDtEYgPNGYyObo_lZStBAM/view?fbclid=IwAR3qjY6Ccn3e6Ia47Eht_3UFg6CVFF-6RHIWfmKvq45qgqeqnvdEAgPoDVo
