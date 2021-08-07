@@ -1,10 +1,8 @@
 ## Commonly used abbreviations and acronyms
 
-### Info
+*  ALS = Amyotrophic Lateral Sclerosis 
 
-ALS = Amyotrophic Lateral Sclerosis 
-
-ELA = esclerosis lateral amiotrófica (ALS in Spanish)
+*  ELA = esclerosis lateral amiotrófica (ALS in Spanish)
 
 MND = Motor Neuron Disease - another name for ALS; term used in the UK and other
 
