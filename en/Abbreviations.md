@@ -37,8 +37,6 @@ emotion control regions of the brain; seen in 20-50% of PALS
 CNS-LS = Center for Neurologic Study – Liability Scale - a short questionnaire,
 designed to be completed by the patient, that provides a quantitative measure of the
 perceived frequency of PBA episodes
-
-
 ALSFRS(R) = Amyotrophic Lateral Sclerosis Functional Rating Scale (Revised) – an
 instrument (questionnaire) for evaluating the functional status of patients with ALS and
 monitoring functional change over time.
