@@ -1,4 +1,4 @@
-## Info
+## Lyme's Disease
 
 Lyme's disease is caused a tick bite, infecting the person with the bacterium _Borrelia burgdorferi_ and rarely, _Borrelia mayonii_. 
 
@@ -10,3 +10,5 @@ Please check with a neurologist ...
 
 ## References
 1.  Wirsching (MD in Germany) 2019. https://onlinelibrary.wiley.com/doi/10.1002/ccr3.2569 
+
+## See also
