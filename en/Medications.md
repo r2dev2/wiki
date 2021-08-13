@@ -5,3 +5,4 @@ However, more recent studies show that that time frame is actually longer by man
 months in many cases. It can cause liver damage so routine blood tests are required to
 assess liver function. If you are debating about taking Riluzole, my neurologist always
 says this:
+a
