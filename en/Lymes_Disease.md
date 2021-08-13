@@ -6,7 +6,7 @@ Lyme's disease has its classical symptoms, but it can also cause neuroborreliosi
 
 There is a well-documented history of neuroborreliosis mimicking ALS, and many "ALS" patients have had a false diagnosis of ALS because of this disease.
 
-Please check with a neurologist ...
+Please check with a neurologist ... hello
 
 ## References
 1.  Wirsching (MD in Germany) 2019. https://onlinelibrary.wiley.com/doi/10.1002/ccr3.2569 
