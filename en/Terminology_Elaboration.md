@@ -1,27 +1,14 @@
-There is a lot of confusion about the terminology of "motor neuron disease," UMN vs
-
-LMN, and what defines an ALS diagnosis, so here is clarification of those terms and
-
-why it matters to get them correct.
+There is a lot of confusion about the terminology of "motor neuron disease," UMN vs LMN, and what defines an ALS diagnosis, so here is clarification of those terms and why it matters to get them correct.
 
 Two Ways to Use the Term "Motor Neuron Disease”
 
--Motor Neuron Disease - a group of progressive neurological diseases that destroy
-
-motor neurons
+-Motor Neuron Disease - a group of progressive neurological diseases that destroymotor neurons
 
 AND/OR
 
--Motor Neuron Disease (MND) – a synonym for ALS used primarily in the U.K., but is
+-Motor Neuron Disease (MND) – a synonym for ALS used primarily in the U.K., but is also used in other parts of the world
 
-also used in other parts of the world
-
-Obviously, this is confusing! There is no simple way to distinguish which one someone
-
-is talking about, unfortunately. Everything else the person refers to or talks about will
-
-have to be your clue as to which one they mean, or you can ask the person directly.
-
+Obviously, this is confusing! There is no simple way to distinguish which one someone is talking about, unfortunately. Everything else the person refers to or talks about will have to be your clue as to which one they mean, or you can ask the person directly.
 
 
 UMN vs. LMN
