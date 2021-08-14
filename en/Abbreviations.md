@@ -4,17 +4,15 @@
 
 *  ELA = esclerosis lateral amiotrófica (ALS in Spanish)
 
-MND = Motor Neuron Disease - another name for ALS; term used in the UK and other
+*  MND = Motor Neuron Disease - another name for ALS; term used in the UK and other parts of the world (see “Clarification of ALS/MND Terminology”)
 
-parts of the world (see “Clarification of ALS/MND Terminology”)
+*  PALS/pALS = person/people with ALS
 
-PALS/pALS = person/people with ALS
+*  CALS/cALS = caregiver(s) of a person with ALS
 
-CALS/cALS = caregiver(s) of a person with ALS
+*  VALS/vALS = veteran(s) with ALS
 
-VALS/vALS = veteran(s) with ALS
-
-fALS = familial ALS (NOT "familiar"), a way of saying hereditary ALS (runs in the
+*  fALS = familial ALS (NOT "familiar"), a way of saying hereditary ALS (runs in the
 
 family)
 
