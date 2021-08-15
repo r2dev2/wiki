@@ -2,7 +2,7 @@
 
 This is a sample page
 
-* bullet point ronak is very handsome
+* bullet point
 * bullet point
 	* nested bullet point
 * another bullet point
