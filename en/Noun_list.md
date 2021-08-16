@@ -1,5 +1,5 @@
 ## List of nouns across website, with weight attached
-### Needs to be regularly updated
+### Needs to be regularly updated, json dict alswiki.github.io/wiki/index.json
 ### Last updated: 08/15/2021
 -------------------------------------------------------
 progressive
